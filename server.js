@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT =  process.env.PORT || 3000;  // 优先使用 Render 分配的端口
 const SECRET_KEY = 'my_secret_key_123'; // JWT 加密密钥
 
 // 读取 db.json 文件
