@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT =  process.env.PORT || 3000;  // 优先使用 Render 分配的端口
+const PORT = process.env.PORT || 3000;  // 优先使用 Render 分配的端口
 const SECRET_KEY = 'my_secret_key_123'; // JWT 加密密钥
 
 // 读取 db.json 文件
@@ -377,7 +377,7 @@ app.get('/profile', authenticate, (req, res) => {
 });
 
 // 启动服务器
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`✅ 自定义服务器运行在 http://localhost:${PORT}`);
     console.log(`📝 注册: POST http://localhost:${PORT}/register`);
     console.log(`🔐 登录: POST http://localhost:${PORT}/login`);
