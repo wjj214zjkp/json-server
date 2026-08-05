@@ -4,10 +4,13 @@
     "server": "json-server --watch db.json --port 3000"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "body-parser": "^2.3.0",
+    "connect-history-api-fallback": "^2.0.0",
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "json-server": "^1.0.0-beta.15",
-    "jsonwebtoken": "^9.0.3"
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.22.0"
   }
 }
